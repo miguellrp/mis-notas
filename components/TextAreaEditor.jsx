@@ -8,6 +8,8 @@ import TextStyle from "@tiptap/extension-text-style"
 import TextAlign from "@tiptap/extension-text-align"
 import Placeholder from "@tiptap/extension-placeholder"
 import Underline from "@tiptap/extension-underline"
+import TaskItem from "@tiptap/extension-task-item"
+import TaskList from "@tiptap/extension-task-list"
 import Link from "@tiptap/extension-link"
 
 import "../styles/TextAreaEditor.css"
@@ -24,12 +26,16 @@ export default function TextAreaEditor ({ placeholder }) {
       Underline,
       Link,
       Highlight,
+      TaskList,
       Placeholder.configure({
         placeholder: placeholder,
         opacity: 0.3,
       }),
       TextAlign.configure({
         types: ["paragraph", "heading"]
+      }),
+      TaskItem.configure({
+        nested: true,
       }),
     ],
   })
@@ -102,6 +108,12 @@ export default function TextAreaEditor ({ placeholder }) {
       <button id="button_bubble"
       onClick={() => editor.chain().focus().unsetAllMarks().clearNodes().run()}>
         <Image id="icon_bubble" src="/bubble_icons/clear_nodes.svg" alt="Símbolo de limpiar formato" width={widthBubbleIcon} height={heightBubbleIcon}/>
+      </button>
+      <button id="button_bubble"
+      onClick={() => editor.chain().focus().toggleTaskList().run()}
+      className={editor.isActive('taskList') ? 'is-active' : ''}
+      >
+        <Image id="icon_bubble" src="/bubble_icons/checkbox.svg" alt="Símbolo de casilla comprobante de tareas (checkbox)" width={widthBubbleIcon} height={heightBubbleIcon}/>
       </button>
       </BubbleMenu>}
       <EditorContent id="texto_nota" editor={editor} />
