@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;700&display=swap');
+
+:root {
+  --blanco: #fff;
+  --violetaCremado: #e190f2;
+  --violetaCremadoTostado: #ce84dc;
+  --violetaContraste: #7f1095;
+  --rosaCremado: #ff67de;
+
+  --oscurecer: rgba(0, 0, 0, 0.15);
+  --oscurecerContraste: rgba(0, 0, 0, 0.7);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::selection {
+  background-color: rgba(206, 107, 204, 0.644);
+}
+
+body {
+  height: 100vh;
+  padding: 7px;
+
+  background-color: var(--violetaCremado);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#titulo {
+  font-family: 'Chakra Petch', sans-serif;
+  font-weight: 650;
+  font-size: 35px;
+  color: var(--violetaContraste);
+
+  text-align: center;
+  padding: 0.7rem;
+
+  -webkit-user-select: none;
+  user-select: none;
+}

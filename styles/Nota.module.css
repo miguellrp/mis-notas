@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+#nota {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  z-index: 0;
+
+  width: 250px;
+  height: 150px;
+  min-width: 190px;
+  min-height: 116px;
+  max-width: 585px;
+  max-height: 485px;
+  padding-bottom: 0.2rem;
+
+  background-color: var(--rosaCremado);
+  color: var(--violetaContraste);
+
+  /* https://getcssscan.com/css-box-shadow-examples */
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
+  resize: none;
+  overflow: hidden;
+}
+
+#nota:hover, #nota:active {
+  resize: auto;
+}
+
+#nota::-webkit-resizer {
+  display: hidden;
+  direction: rtl;
+}
+
+
+#barra_superior_nota {
+  width: 100%;
+  height: 25px;
+
+  display: flex;
+  justify-content: right;
+  align-items: center;
+
+  background-color: var(--oscurecer);
+
+  cursor: grab;
+}
+
+#barra_superior_nota:active {
+  cursor: grabbing;
+}
+
+.delete_button {
+  float: right;
+  margin-right: 10px;
+
+  font-family: 'Indie Flower', cursive;
+  font-size: large;
+  color: var(--blanco);
+  filter: brightness(90%);
+  
+
+  -webkit-user-select: none;
+  user-select: none;
+
+  background-color: transparent;
+  border: none;
+
+  transition: all 0.2s ease-in-out;
+}
+
+.delete_button:hover {
+  text-shadow: 0px 0px 5px var(--blanco);
+  cursor: pointer;
+}

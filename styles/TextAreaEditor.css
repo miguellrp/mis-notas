@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@400;700&display=swap');
+@import url('formatTextRich.css');
+
+#texto_nota {
+  background-color: transparent;
+
+  width: 100%;
+  height: 100%;
+  
+  font-family: 'Quicksand', sans-serif;
+  font-size: 15px;
+  background-color: inherit;
+
+  cursor: text;
+  overflow: auto;
+}
+
+/* .ProseMirror -> nombre por defecto que da TipTap a su "textarea" */
+.ProseMirror {
+  width: 100%;
+  height: 100%;
+
+  padding: 1.1rem 1.5rem;
+}
+
+#texto_nota .is-editor-empty:first-child::before {
+  content: attr(data-placeholder);
+  
+  float: left;
+  height: 0;
+
+  font-weight: bold;
+  opacity: 0.5;
+}
+
+.ProseMirror:focus {
+  outline: none;
+}
+
+/* Custom ScrollBar -> https://css-tricks.com/custom-scrollbars-in-webkit/ */
+#texto_nota::-webkit-scrollbar {
+  width: 8px;
+}
+
+#texto_nota:hover::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.4);
+}
+
+#texto_nota::-webkit-scrollbar-corner {
+  display: none;
+  background-color: transparent;
+}
+
+
+#button_bubble {
+  align-self: center;
+  margin: 2px;
+  padding: 0.3rem;
+
+  border: 1px solid var(--violetaContraste);
+  border-radius: 10px;
+  background-color: var(--violetaCremado);
+
+  cursor: pointer;
+  box-shadow: 2px 2px 1px var(--oscurecer);
+
+  transition: 0.2s ease-in-out;
+
+  position: relative;
+}
+
+#button_bubble:hover, #button_bubble.is-active {
+  background-color: var(--violetaCremadoTostado);
+  box-shadow: 0 0 var(--oscurecer);
+}
+
+
+#icon_bubble {
+  display: flex;
+  align-items: center;
+}
+
+
+#bubble_button_color {
+  width: 0;
+  height: 0;
+  position: absolute;
+  z-index: -1;
+}
