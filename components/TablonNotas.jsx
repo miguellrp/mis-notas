@@ -1,9 +1,9 @@
 import { useState } from "react"
-import { v4 as generarID } from "uuid";
-import Nota from "./Nota.jsx";
-import RoundedButton from "./RoundedButton.jsx";
-import { Modal } from 'react-responsive-modal';
-import 'react-responsive-modal/styles.css';
+import { v4 as generarID } from "uuid"
+import Nota from "./Nota.jsx"
+import RoundedButton from "./RoundedButton.jsx"
+import { Modal } from "react-responsive-modal"
+import "../styles/Modal.css"
 
 export default function ListaNotas() {
   const defaultPlaceholder = "☑️ Empezar a escribir mi nota...";
@@ -55,12 +55,23 @@ export default function ListaNotas() {
         <Nota key={nota.id} placeholder={nota.placeholder} handleDeleteNota={() => deleteNota(nota.id)} />
       ))}
       <Modal open={openModal} onClose={onCloseModal}>
-        <h2>Simple centered modal</h2>
+        <h2>Guía rápida de uso</h2>
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-            pulvinar risus non risus hendrerit venenatis. Pellentesque sit amet
-            hendrerit risus, sed porttitor quam.
-          </p>
+          ¡Bienvenide! Aquí está tu app de confianza para gestionar tus notas rápidas, las cuales quedarán
+          almacenadas entre sesiones gracias al almacenamiento local de tu navegador web.
+          ¡Estas notas reconocen la sintaxis Markdown! Es tan fácil como aplicar la sintaxis y un espacio
+          entre el método y el texto al que se le aplica. Es decir, por ejemplo:
+          <pre>
+            <code>
+              #Encabezado 1 👇<br/>
+              #Encabezado 1
+              <br/><br/><hr/><br/>
+              # Encabezado 1 👇
+              <h1>Encabezado 1</h1>
+
+            </code>
+          </pre>
+        </p>
       </Modal>
     </>
   )
