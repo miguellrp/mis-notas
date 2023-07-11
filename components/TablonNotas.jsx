@@ -1,8 +1,10 @@
 import { useState } from "react"
+import Image from "next/image.js"
 import { v4 as generarID } from "uuid"
 import Nota from "./Nota.jsx"
 import RoundedButton from "./RoundedButton.jsx"
 import { Modal } from "react-responsive-modal"
+
 import "../styles/Modal.css"
 
 export default function ListaNotas() {
@@ -57,20 +59,11 @@ export default function ListaNotas() {
       <Modal open={openModal} onClose={onCloseModal}>
         <h2>Guía rápida de uso</h2>
         <p>
-          ¡Bienvenide! Aquí está tu app de confianza para gestionar tus notas rápidas, las cuales quedarán
-          almacenadas entre sesiones gracias al almacenamiento local de tu navegador web.
-          ¡Estas notas reconocen la sintaxis Markdown! Es tan fácil como aplicar la sintaxis y un espacio
-          entre el método y el texto al que se le aplica. Es decir, por ejemplo:
-          <pre>
-            <code>
-              #Encabezado 1 👇<br/>
-              #Encabezado 1
-              <br/><br/><hr/><br/>
-              # Encabezado 1 👇
-              <h1>Encabezado 1</h1>
-
-            </code>
-          </pre>
+          Hola 👋 Aquí está tu app de confianza para gestionar tus notas rápidas, las cuales quedarán
+          almacenadas entre sesiones gracias al almacenamiento local de tu navegador web. <br/>
+          ¡Estas notas <strong>reconocen la sintaxis Markdown</strong>! Es tan fácil como aplicar la sintaxis y un espacio
+          entre el método y el texto al que se le aplica:
+          <Image id="image_demo" src={"/captura_demo.png"} alt="Demostración de aplicación para sintaxis Markdown en las notas" width={356} height={256} />
         </p>
       </Modal>
     </>

@@ -35,27 +35,43 @@
 }
 
 .react-responsive-modal-modal {
+  position: relative;
+  overflow-y: auto;
   max-width: 800px;
+  margin: 1.2rem;
+  padding: 1.2rem;
+
   display: inline-block;
   text-align: left;
   vertical-align: middle;
-  background: #ffffff;
+
+  font-family: var(--quicksand-font);
+  background: var(--blanco);
   box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.25);
-  margin: 1.2rem;
-  padding: 1.2rem;
-  position: relative;
-  overflow-y: auto;
+}
+
+.react-responsive-modal-modal h2{
+  text-align: center;
 }
 
 .react-responsive-modal-closeButton {
+  display: flex;
   position: absolute;
   top: 14px;
   right: 14px;
+
   border: none;
   padding: 0;
+
   cursor: pointer;
   background-color: transparent;
+}
+
+#image_demo {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid black;
 }
 
 /* Used to fix a screen glitch issues with the animation see https://github.com/pradel/react-responsive-modal/issues/495 */

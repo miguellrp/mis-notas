@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;700&display=swap');
-
 :root {
   --blanco: #fff;
   --violetaCremado: #e190f2;
@@ -36,7 +34,7 @@ body {
 }
 
 #titulo {
-  font-family: 'Chakra Petch', sans-serif;
+  font-family: var(--chakra-petch-font);
   font-weight: 650;
   font-size: 35px;
   color: var(--violetaContraste);

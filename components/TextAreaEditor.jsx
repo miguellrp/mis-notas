@@ -116,7 +116,7 @@ export default function TextAreaEditor ({ placeholder }) {
         <Image id="icon_bubble" src="/bubble_icons/checkbox.svg" alt="Símbolo de casilla comprobante de tareas (checkbox)" width={widthBubbleIcon} height={heightBubbleIcon}/>
       </button>
       </BubbleMenu>}
-      <EditorContent id="texto_nota" editor={editor} />
+      <EditorContent id="texto_nota" editor={editor} spellCheck="false"/>
     </>
   )
 
