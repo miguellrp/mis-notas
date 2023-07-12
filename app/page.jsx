@@ -1,8 +1,8 @@
 'use client'
 
 import React from "react"
-import TablonNotas from "/components/TablonNotas.jsx";
-import { chakra_petch, hind, indie_flower, quicksand } from "./localFonts.jsx"
+import TablonNotas from "/components/TablonNotas.jsx"
+import { chakra_petch, indie_flower, quicksand } from "./localFonts.jsx"
 
 export default function HomePage() {
   return (

@@ -54,6 +54,11 @@
   text-align: center;
 }
 
+.react-responsive-modal-modal p {
+  text-align: justify;
+  padding: 5px;
+}
+
 .react-responsive-modal-closeButton {
   display: flex;
   position: absolute;
@@ -69,9 +74,8 @@
 
 #image_demo {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid black;
+  margin: 15px auto 15px auto;
+  border-radius: 5px;
 }
 
 /* Used to fix a screen glitch issues with the animation see https://github.com/pradel/react-responsive-modal/issues/495 */

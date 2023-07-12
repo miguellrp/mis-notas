@@ -31,17 +31,8 @@
   direction: rtl;
 }
 
-.nota_top {
-  z-index: 10!important;
-  position: relative;
-}
-
-.nota_top:focus, .ProseMirror:focus {
+.activa {
   z-index: 100!important;
-}
-
-.nota_bottom {
-  z-index: 10!important;
   position: relative;
 }
 
