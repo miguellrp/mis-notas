@@ -42,10 +42,16 @@ export default function TextAreaEditor ({ placeholder }) {
 
   return (
     <>
-      {editor && <BubbleMenu editor={editor} tippyOptions={{ appendTo: "parent", placement: "bottom-end", duration: 300, maxWidth: "200px", moveTransition: 'transform 0.3s ease-in-out',}}>
+      {editor && <BubbleMenu editor={editor} tippyOptions={{
+        appendTo: () => document.body,
+        placement: "top",
+        duration: 300,
+        maxWidth: "200px",
+        moveTransition: 'transform 0.3s ease-in-out',
+        }}>
         <button id="button_bubble"
         onClick={ColorBubbleButton}>
-          <Image id="icon_bubble" src="/bubble_icons/palette.svg" alt="Símbolo de una paleta de colores" width={widthBubbleIcon} height={heightBubbleIcon}/>
+          <Image id="icon_bubble" src="/bubble_icons/brush.svg" alt="Símbolo de un pincel" width={widthBubbleIcon} height={heightBubbleIcon}/>
           <input type="color" id="bubble_button_color"
           onInput={event => editor.chain().focus().setColor(event.target.value).run()}
           value={editor.getAttributes('textStyle').color}
@@ -107,7 +113,7 @@ export default function TextAreaEditor ({ placeholder }) {
       </button>
       <button id="button_bubble"
       onClick={() => editor.chain().focus().unsetAllMarks().clearNodes().run()}>
-        <Image id="icon_bubble" src="/bubble_icons/clear_nodes.svg" alt="Símbolo de limpiar formato" width={widthBubbleIcon} height={heightBubbleIcon}/>
+        <Image id="icon_bubble" src="/bubble_icons/eraser.svg" alt="Símbolo de un borrador" width={widthBubbleIcon} height={heightBubbleIcon}/>
       </button>
       <button id="button_bubble"
       onClick={() => editor.chain().focus().toggleTaskList().run()}
