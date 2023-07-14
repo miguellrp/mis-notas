@@ -62,7 +62,7 @@ export default function ListaNotas() {
           almacenadas entre sesiones gracias al almacenamiento local de tu navegador web. <br/>
           ¡Estas notas reconocen la <a href="https://tutorialmarkdown.com/guia" target="_blank">sintaxis Markdown</a>! Es tan fácil como aplicar la sintaxis y un espacio
           entre el método y el texto al que se le aplica:
-          <Image id="image_demo" src={"/modal/captura_demo.png"} alt="Demostración de aplicación para sintaxis Markdown en las notas" width={450} height={360} />
+          <Image id="image_demo" src={"/modal/captura_markdown_demo.png"} alt="Demostración de aplicación para sintaxis Markdown en las notas" width={450} height={360} />
           Además reconoce los atajos de teclado propios para enriquecer el estilo del texto (CTRL+B 👉 <strong>fuente en negrita</strong>, CTRL+I 👉
           <i> fuente en cursiva</i> ...). <br/>
           Por último, también puedes estilizar a posteriori. Simplemente selecciona el texto que quieras estilizar y ...
