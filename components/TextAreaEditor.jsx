@@ -44,9 +44,9 @@ export default function TextAreaEditor ({ placeholder }) {
     <>
       {editor && <BubbleMenu editor={editor} tippyOptions={{
         appendTo: () => document.body,
-        placement: "top",
+        placement: "auto",
         duration: 300,
-        maxWidth: "200px",
+        maxWidth: "232px",
         moveTransition: 'transform 0.3s ease-in-out',
         }}>
         <button id="button_bubble"

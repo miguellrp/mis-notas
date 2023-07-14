@@ -37,7 +37,7 @@
 .react-responsive-modal-modal {
   position: relative;
   overflow-y: auto;
-  max-width: 1200px;
+  max-width: 900px;
   margin: 1.2rem;
   padding: 1.2rem;
 
@@ -52,7 +52,7 @@
   border-radius: 15px;
 }
 
-.react-responsive-modal-modal h1, h2, h3{
+.react-responsive-modal-modal h2 {
   text-align: center;
 }
 
@@ -83,6 +83,10 @@
   display: flex;
   margin: 15px auto 15px auto;
   border-radius: 5px;
+}
+
+figcaption {
+  text-align: center;
 }
 
 /* Used to fix a screen glitch issues with the animation see https://github.com/pradel/react-responsive-modal/issues/495 */

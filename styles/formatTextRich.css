@@ -2,6 +2,15 @@ a {
   cursor: pointer;
 }
 
+blockquote {
+  background-color: var(--oscurecer);
+  margin: 15px;
+  color: white;
+  border-left: 2px solid black;
+  padding: 0.8em;
+  font-style: italic;
+}
+
 hr {
   border: 1px solid var(--violetaContraste);
 }
@@ -11,10 +20,14 @@ mark {
   color: inherit;
 }
 
-ol>li {
+ol {
   list-style-type: none;
-  counter-increment: step-counter;
+  counter-reset: step-counter;
+}
+
+ol>li {
   margin-top: 10px;
+  counter-increment: step-counter;
 }
 
 ul>li {
