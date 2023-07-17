@@ -4,7 +4,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 1000;
+  z-index: 99999;
 }
 
 .react-responsive-modal-overlay {
@@ -35,11 +35,13 @@
 }
 
 .react-responsive-modal-modal {
-  position: relative;
   overflow-y: auto;
   max-width: 900px;
   margin: 1.2rem;
   padding: 1.2rem;
+
+  -webkit-user-select: text;
+  user-select: text;
 
   display: inline-block;
   text-align: left;
@@ -53,12 +55,30 @@
 }
 
 .react-responsive-modal-modal h2 {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 480px;
+  margin: auto;
+  margin-bottom: 10px;
+  padding: 0.5em;
+
+  background-color: var(--violetaCremado);
+  color: var(--blanco);
+  border-radius: 20px;
 }
 
 .react-responsive-modal-modal p {
   text-align: justify;
+  margin-top: 10px;
   padding: 5px;
+}
+
+.react-responsive-modal-modal br {
+  margin-top: 20px;
+  width: 20px;
+  height: 20px;
+  background-color: blue;
 }
 
 .react-responsive-modal-closeButton {
@@ -76,7 +96,7 @@
 }
 
 .react-responsive-modal-closeButton:hover {
-  background-color: var(--oscurecer);
+  background-color: var(--violetaCremado);
 }
 
 #image_demo {
@@ -87,6 +107,32 @@
 
 figcaption {
   text-align: center;
+  font-size: 15px;
+  color: var(--violetaContraste);
+}
+
+footer {
+  display: block;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+  width: 330px;
+  margin: auto;
+  margin-top: 30px;
+  padding: 0.5em;
+
+  background-color: var(--oscurecer);
+  border-radius: 10px;
+}
+
+footer>a {
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.25s ease-in-out;
+}
+
+footer>a:hover {
+  color: var(--violetaCremadoTostado);
 }
 
 /* Used to fix a screen glitch issues with the animation see https://github.com/pradel/react-responsive-modal/issues/495 */

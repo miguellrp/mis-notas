@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import Image from "next/image"
 import { BubbleMenu, useEditor, EditorContent } from "@tiptap/react"
 import { Color } from "@tiptap/extension-color"
@@ -14,7 +14,8 @@ import Link from "@tiptap/extension-link"
 
 import "../styles/TextAreaEditor.css"
 
-export default function TextAreaEditor ({ placeholder }) {
+export default function TextAreaEditor ({ notaId, placeholder }) {
+  const [content, setContent] = useState("");
   const widthBubbleIcon = 20;
   const heightBubbleIcon = 20;
 
@@ -38,7 +39,27 @@ export default function TextAreaEditor ({ placeholder }) {
         nested: true,
       }),
     ],
-  })
+    onUpdate: ({ editor }) => {
+      const json = editor.getHTML();
+      localStorage.setItem(`content_${notaId}`, json);
+    },
+  });
+
+
+  useEffect(() => {
+    const savedContent = localStorage.getItem(`content_${notaId}`);
+
+    if (savedContent) {
+      setContent(savedContent);
+    }
+  }, [notaId]);
+
+  useEffect(() => {
+    if (content && editor) {
+      editor.commands.setContent(content);
+    }
+  }, [editor, content]);
+
 
   return (
     <>

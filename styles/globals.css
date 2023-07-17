@@ -19,6 +19,20 @@
   background-color: rgba(206, 107, 204, 0.644);
 }
 
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+:hover::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.9);
+}
+
+::-webkit-scrollbar-corner {
+  display: none;
+  background-color: transparent;
+}
+
 body {
   height: 100vh;
   padding: 7px;
@@ -27,7 +41,6 @@ body {
 
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
 
   -webkit-user-select: none;
   user-select: none;

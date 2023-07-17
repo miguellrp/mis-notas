@@ -4,26 +4,28 @@ import { useState } from "react"
 import styles from "../styles/Nota.module.css"
 import "../styles/Modal.css"
 
-export default function Nota({ placeholder, handleDeleteNota }) {
+export default function Nota({ id, defaultPos, placeholder, handleOnStop, handleDeleteNota }) {
   const [isFocused, setIsFocused] = useState(false);
-
-  // window -> ReferenceError (serverSide?)
-  const xIndex = window.innerWidth / 2 - 120;  
-  const yIndex = window.innerHeight / 2 - 110;
 
   const [isActive, setIsActive] = useState(false);
   const [background, setBackground] = useState("");
   const openListaColor = () => setIsActive(!isActive);
 
+  function setBackgroundColor(color) {
+    setBackground(color);
+    localStorage.setItem(`backgroundcolor_${id}`, color);
+  }
+
   return (
-    <Draggable defaultPosition={{x: xIndex, y: yIndex}}
+    <Draggable defaultPosition={defaultPos}
     bounds="parent"
     handle=".barra-superior"
+    onStop={handleOnStop}
     >
       <div id={styles.nota}
       style={{
-          backgroundColor: background,
-        }}
+        backgroundColor: localStorage.getItem(`backgroundcolor_${id}`) || background,
+      }}
       className={isFocused ? styles.activa : styles.inactiva}
       onFocus={() => setIsFocused(true)}
       onBlur={() => setIsFocused(false)}
@@ -38,34 +40,34 @@ export default function Nota({ placeholder, handleDeleteNota }) {
         style={{ display: isActive ? "flex" : "none"}}>
           <input type="button" className={styles.color_picker}
             style={{ backgroundColor: "#ff67de" }}
-            onClick={() => setBackground("#ff67de")}
+            onClick={() => setBackgroundColor("#ff67de")}
           />
           <input type="button" className={styles.color_picker}
             style={{ backgroundColor: "#f1e38b" }}
-            onClick={() => setBackground("#f1e38b")}
+            onClick={() => setBackgroundColor("#f1e38b")}
           />
           <input type="button" className={styles.color_picker}
             style={{ backgroundColor: "#87b8f0" }}
-            onClick={() => setBackground("#87b8f0")}
+            onClick={() => setBackgroundColor("#87b8f0")}
           />
           <input type="button" className={styles.color_picker}
             style={{ backgroundColor: "#82e271" }}
-            onClick={() => setBackground("#82e271")}
+            onClick={() => setBackgroundColor("#82e271")}
           />
           <input type="button" className={styles.color_picker}
-            style={{ backgroundColor: "#de9f58" }}
-            onClick={() => setBackground("#de9f58")}
+            style={{ backgroundColor: "#f7be7c" }}
+            onClick={() => setBackgroundColor("#f7be7c")}
           />
           <input type="button" className={styles.color_picker}
-            style={{ backgroundColor: "#82786b" }}
-            onClick={() => setBackground("#82786b")}
+            style={{ backgroundColor: "#b3a695" }}
+            onClick={() => setBackgroundColor("#b3a695")}
           />
           <input type="button" className={styles.color_picker}
             style={{ backgroundColor: "#ebebeb" }}
-            onClick={() => setBackground("#ebebeb")}
+            onClick={() => setBackgroundColor("#ebebeb")}
           />
         </div>
-        <TextAreaEditor placeholder={placeholder}/>
+        <TextAreaEditor placeholder={placeholder} notaId={id} />
       </div>
     </Draggable>
   )
