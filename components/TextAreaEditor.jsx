@@ -3,6 +3,8 @@ import Image from "next/image"
 import { BubbleMenu, useEditor, EditorContent } from "@tiptap/react"
 import { Color } from "@tiptap/extension-color"
 import StarterKit from "@tiptap/starter-kit"
+import Blockquote from "@tiptap/extension-blockquote"
+import BulletList from "@tiptap/extension-bullet-list"
 import Highlight from "@tiptap/extension-highlight"
 import TextStyle from "@tiptap/extension-text-style"
 import TextAlign from "@tiptap/extension-text-align"
@@ -19,15 +21,36 @@ export default function TextAreaEditor ({ notaId, placeholder }) {
   const widthBubbleIcon = 20;
   const heightBubbleIcon = 20;
 
+  const CustomBulletList = BulletList.extend({
+    addKeyboardShortcuts() {
+      return {
+        "Tab": () => {
+          this.editor.chain()
+            .sinkListItem('listItem')
+            .command(({ tr }) => {
+              tr.insertText('  ')
+    
+              return true
+             })
+            .run()
+    
+          return true // <- make sure to return true to prevent the tab from blurring.
+        },
+      }
+    },
+  });
+
   const editor = useEditor({
     extensions: [
       StarterKit,
+      Blockquote,
       TextStyle,
       Color,
       Underline,
       Link,
       Highlight,
       TaskList,
+      CustomBulletList,
       Placeholder.configure({
         placeholder: placeholder,
         opacity: 0.3,

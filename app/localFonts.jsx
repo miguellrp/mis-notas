@@ -1,6 +1,7 @@
 import localFont from "next/font/local"
 
 export const chakra_petch = localFont({
+  preload: "true",
   src: [
     {
       path: "../public/fonts/Chakra_Petch/ChakraPetch-Light.ttf",
@@ -18,6 +19,7 @@ export const chakra_petch = localFont({
 });
 
 export const indie_flower = localFont({
+  preload: "true",
   src: [
     {
       path: "../public/fonts/Indie_Flower/IndieFlower-Regular.ttf",
@@ -27,6 +29,7 @@ export const indie_flower = localFont({
 });
 
 export const quicksand = localFont({
+  preload: "true",
   src: [
     {
       path: "../public/fonts/Quicksand/Quicksand-VariableFont_wght.ttf",

@@ -74,6 +74,11 @@ pre code {
   font-size: 0.8rem;
 }
 
+code {
+  background-color: var(--blanco);
+  padding: 0.2rem;
+  border-radius: 4px;
+}
 
 /* Custom CheckBox */
 

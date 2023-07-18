@@ -112,7 +112,10 @@ export default function TablonNotas() {
         </figcaption>
         <p>
           Además reconoce los atajos de teclado propios para enriquecer el estilo del texto (CTRL+B 👉 <strong>fuente en negrita</strong>, CTRL+I 👉
-          <i> fuente en cursiva</i> ...). Y, por último, también puedes estilizar a posteriori. Simplemente selecciona el texto que quieras estilizar y ...
+          <i> fuente en cursiva</i> ...). Para ver todos los atajos de teclado, entra <a href="https://tiptap.dev/api/keyboard-shortcuts" target="_blank">aquí</a>.
+        </p>
+        <p>
+        Por último, también puedes estilizar a posteriori. Simplemente selecciona el texto que quieras estilizar y ...
         </p>
         <Image id="image_demo" src={"/modal/Demo_BubbleMenu.gif"} alt="Demostración de aplicación para enriquecer texto en las notas" width={450} height={360} />
         <figcaption>✨Voilá✨ Te aparecerá un pequeño menú de estilos.</figcaption>
