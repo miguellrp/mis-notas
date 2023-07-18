@@ -40,10 +40,14 @@
 #texto_nota::-webkit-scrollbar {
   width: 8px;
 }
-
-#texto_nota:hover::-webkit-scrollbar-thumb {
+#texto_nota::-webkit-scrollbar-thumb {
+  visibility: hidden;
   border-radius: 10px;
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.4);
+}
+
+#texto_nota:hover::-webkit-scrollbar-thumb {
+  visibility: visible;
 }
 
 #texto_nota::-webkit-scrollbar-corner {

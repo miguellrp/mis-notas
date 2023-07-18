@@ -14,7 +14,6 @@ export default function HomePage() {
           --quicksand-font: ${quicksand.style.fontFamily};
         }
       `}</style>
-      <h1 id="titulo">mis notas 🗒️</h1>
       <TablonNotas />
     </>
   )

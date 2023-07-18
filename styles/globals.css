@@ -23,7 +23,7 @@
   width: 12px;
 }
 
-:hover::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
   border-radius: 10px;
   -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.9);
 }
@@ -41,19 +41,6 @@ body {
 
   display: flex;
   justify-content: space-between;
-
-  -webkit-user-select: none;
-  user-select: none;
-}
-
-#titulo {
-  font-family: var(--chakra-petch-font);
-  font-weight: 650;
-  font-size: 35px;
-  color: var(--violetaContraste);
-
-  text-align: center;
-  padding: 0.7rem;
 
   -webkit-user-select: none;
   user-select: none;

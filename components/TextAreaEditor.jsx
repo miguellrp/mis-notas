@@ -45,7 +45,6 @@ export default function TextAreaEditor ({ notaId, placeholder }) {
     },
   });
 
-
   useEffect(() => {
     const savedContent = localStorage.getItem(`content_${notaId}`);
 

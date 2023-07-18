@@ -62,7 +62,13 @@ export default function TablonNotas() {
 
   return (
     <>
-      <div style={{ display: "flex", columnGap: "20px", padding: "1rem" }}>
+      <div style={{
+        display: "flex",
+        position: "fixed",
+        flexDirection: "column",
+        rowGap: "20px",
+        padding: "0.5em",
+      }}>
         <RoundedButton
           handleClick={addNota}
           imageButton="ico_add.svg"
@@ -92,7 +98,7 @@ export default function TablonNotas() {
         />
       ))}
       <Modal open={openModal} onClose={onCloseModal}>
-        <h2>🗒️ Breve nota informativa de uso 🗒️</h2>
+        <h1 id="titulo">🗒️ Breve nota informativa de uso 🗒️</h1>
         <p>
           ¡Hola! 👋 Aquí podrás gestionar tus notas rápidas, las cuales quedarán
           almacenadas entre sesiones gracias al almacenamiento local de tu navegador web. <br/>

@@ -5,6 +5,6 @@ export default function RoundedButton({ idIcon, handleClick, imageButton, altIma
   return <button
     id={styles.RoundedButton}
     onClick={handleClick}>
-      <Image id={idIcon}  src={imageButton} alt={altImage} width={30} height={30} />
+      <Image id={idIcon} priority={true}  src={imageButton} alt={altImage} width={30} height={30} />
     </button>
 }

@@ -54,14 +54,15 @@
   border-radius: 15px;
 }
 
-.react-responsive-modal-modal h2 {
+#titulo {
+  font-family: var(--chakra-petch-font);
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 480px;
+  width: 680px;
   margin: auto;
   margin-bottom: 10px;
-  padding: 0.5em;
+  padding: 0.3em;
 
   background-color: var(--violetaCremado);
   color: var(--blanco);
@@ -179,5 +180,31 @@ footer>a:hover {
   100% {
     transform: scale(0.96);
     opacity: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .react-responsive-modal-modal {
+    overflow-y: auto;
+    max-width: 475px;
+  }
+
+  .react-responsive-modal-container{
+    display: flex;
+  }
+
+  #titulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: larger;
+    text-align: center;
+    width: 250px;
+  }
+
+  #image_demo {
+    width: 240px;
+    height: 200px;
   }
 }
