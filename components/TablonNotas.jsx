@@ -114,7 +114,7 @@ export default function TablonNotas() {
           ¡Estas notas reconocen la sintaxis Markdown! Es tan fácil como aplicar la sintaxis y observar como
           se aplica el estilado Markdown:
         </p>
-          <Image id="image_demo" src={"/modal/Demo_Markdown.gif"} alt="Demostración de aplicación para sintaxis Markdown en las notas" width={450} height={360} />
+          <Image id="image_demo" src={"/screenshots/modal/Demo_Markdown.gif"} alt="Demostración de aplicación para sintaxis Markdown en las notas" width={450} height={360} />
         <figcaption>  
           Para echar un 👀 a la sintaxis, entra en esta <a href="https://tutorialmarkdown.com/guia" target="_blank">guía rápida de
           Markdown</a> preparada por Edu Lázaro (<a href="https://twitter.com/neeonez" target="_blank">@neeonez</a>).
@@ -126,7 +126,7 @@ export default function TablonNotas() {
         <p>
         Por último, también puedes estilizar a posteriori. Simplemente selecciona el texto que quieras estilizar y ...
         </p>
-        <Image id="image_demo" src={"/modal/Demo_BubbleMenu.gif"} alt="Demostración de aplicación para enriquecer texto en las notas" width={450} height={360} />
+        <Image id="image_demo" src={"/screenshots/modal/Demo_BubbleMenu.gif"} alt="Demostración de aplicación para enriquecer texto en las notas" width={450} height={360} />
         <figcaption>✨Voilá✨ Te aparecerá un pequeño menú de estilos.</figcaption>
         <footer>💙 Feito con agarimo por <a href="https://github.com/miguellrp" target="_blank"> @miguellrp</a> 🤍</footer>
       </Modal>
