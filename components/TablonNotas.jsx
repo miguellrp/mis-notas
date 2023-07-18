@@ -10,7 +10,7 @@ import "../styles/Modal.css"
 export default function TablonNotas() {
   const defaultPlaceholder = "☑️ Empezar a escribir mi nota...";
   const notasAlmacenadas = typeof window !== 'undefined' && window.localStorage.getItem("notas");
-  const notasIniciales = notasAlmacenadas ? JSON.parse(notasAlmacenadas) : [{ id: generarID(), placeholder: defaultPlaceholder }];
+  const notasIniciales = notasAlmacenadas ? JSON.parse(notasAlmacenadas) : [];
   
   const [notas, setNotas] = useState(notasIniciales);
 
