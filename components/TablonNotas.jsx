@@ -14,9 +14,18 @@ export default function TablonNotas() {
   
   const [notas, setNotas] = useState(notasIniciales);
 
-  // window -> ReferenceError (serverSide?)
-  const xIndex = window.innerWidth / 2 - 130;  
-  const yIndex = window.innerHeight / 2 - 110;
+  // para evitar referenceError del lado del servidor (por no poder acceder al objeto "window"):
+  let xIndex, yIndex;
+
+  if (typeof window !== "undefined") {
+    xIndex = window.innerWidth / 2 - 130;
+    yIndex = window.innerHeight / 2 - 110;
+  }
+  else {
+    // Valores predeterminados para el servidor
+    xIndex = 0;
+    yIndex = 0;
+  }
   
   const addNota = () => {
     const newNota = {

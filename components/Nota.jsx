@@ -8,7 +8,7 @@ export default function Nota({ id, defaultPos, placeholder, handleOnStop, handle
   const [isFocused, setIsFocused] = useState(false);
 
   const [isActive, setIsActive] = useState(false);
-  const [background, setBackground] = useState("");
+  const [background, setBackground] = useState("var(--rosaCremado)");
   const openListaColor = () => setIsActive(!isActive);
 
   function updateBackgroundColor(color) {
