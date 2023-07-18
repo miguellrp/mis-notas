@@ -2,7 +2,7 @@
 
 import React from "react"
 import TablonNotas from "/components/TablonNotas.jsx"
-import { chakra_petch, indie_flower, quicksand } from "../components/LocalFonts.jsx"
+import { chakra_petch, indie_flower, quicksand } from "/components/LocalFonts.jsx"
 
 export default function HomePage() {
   return (
