@@ -42,9 +42,9 @@ export default function Nota({ id, defaultPos, placeholder, handleOnStop, handle
       <div id={styles.nota}
       ref={notaRef}
       style={{
-        backgroundColor: localStorage.getItem(`backgroundcolor_${id}`) || background,
-        width: localStorage.getItem("widthNota"),
-        height: localStorage.getItem("heightNota"),
+        backgroundColor: typeof window !== "undefined" ? localStorage.getItem(`backgroundcolor_${id}`) || background : background,
+        width: typeof window !== "undefined" ? localStorage.getItem("widthNota") : "273px",
+        height: typeof window !== "undefined" ? localStorage.getItem("heightNota") : "197px",
       }}
       className={isFocused ? styles.activa : styles.inactiva}
       onFocus={() => setIsFocused(true)}
