@@ -105,3 +105,13 @@
 
   cursor: pointer;
 }
+
+@media (max-width: 600px) {
+  #nota {
+    resize: auto;
+    min-width: 120px;
+    min-height: 100px;
+    max-width: 290px;
+    max-height: 250px;
+  }
+}

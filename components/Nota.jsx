@@ -53,8 +53,8 @@ export default function Nota({ id, defaultPos, placeholder, handleOnStop, handle
         <div id={styles.barra_superior_nota}
         className="barra-superior"
         >
-          <button className={styles.barra_superior_button} onClick={openListaColor}>🎨</button>
-          <button className={styles.barra_superior_button} onClick={handleDeleteNota} style={{ fontSize: "x-large"}}>x</button>
+          <button className={styles.barra_superior_button} style={{fontSize:"medium"}} onClick={openListaColor}>🎨</button>
+          <button className={styles.barra_superior_button} onClick={handleDeleteNota}>x</button>
         </div>
         <div id={styles.lista_colores}
         style={{ display: isActive ? "flex" : "none"}}>
